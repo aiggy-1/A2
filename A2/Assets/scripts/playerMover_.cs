@@ -5,6 +5,8 @@ public class playerMover_ : MonoBehaviour
 {
 
 
+
+
     public int coinCount;
 
     public TMP_Text coinCountText;
@@ -31,9 +33,15 @@ public class playerMover_ : MonoBehaviour
     {
         if (c.gameObject.CompareTag("coin"))
         {
-            this.gameObject.SetActive(false);
+            c.gameObject.SetActive(false);
             coinCount++;
+            updateCoinCounter();
         }
         
+    }
+
+    public void updateCoinCounter()
+    {
+        coinCountText.text = string.Format("{0:0}:",coinCount);
     }
 }
