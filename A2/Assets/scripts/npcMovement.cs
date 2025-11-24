@@ -46,8 +46,8 @@ public class npcMovement : MonoBehaviour
     }
     private void drive()
     {
-        Wheelfr.motorTorque = 50f;
-        Wheelfl.motorTorque = 50f;
+        Wheelfr.motorTorque = 120f;
+        Wheelfl.motorTorque = 120f;
     }
     private void checkWaypointDistance()
     {
